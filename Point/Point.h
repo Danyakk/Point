@@ -28,5 +28,8 @@ public:// интерфейс класса, прототипы методов
 	/*Point operator*(Point& b);
 	Point operator-(Point& b);
 	Point operator/(Point& b);*/
+
+	Point& operator++ ();
+	Point& operator-- ();
 };
 

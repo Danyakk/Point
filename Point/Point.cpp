@@ -108,4 +108,18 @@ bool Point::operator<=(Point& b)
 	return false;
 }
 
+Point& Point::operator++()
+{
+	x += 10;
+	y += 10;
+	return *this;
+}
+
+Point& Point::operator--()
+{
+	x -= 2;
+	y -= 2;
+	return *this;
+}
+
 int Point::count = 0; // начальная инициализация статик поля

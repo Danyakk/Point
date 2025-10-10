@@ -7,10 +7,18 @@ int main()
 	Point::PrintCount();*/
 	Point a(1, 2), b(3, 4);/*
 	Point::PrintCount();*/
-	Point d = a + b;
+	/*Point d = a + b;
 	Point d1 = a.operator+(b);
 	d1 = a + 10;
-	d1.Print();
+	d1.Print();*/
+
+	Point c = ++a;
+	c.Print();
+	a.Print();
+
+	Point d = --a;
+	d.Print();
+	a.Print();
 
 	/*Point d1 = a * b;
 	d1.Print();
@@ -18,7 +26,8 @@ int main()
 	d2.Print();
 	Point d3 = a / b;
 	d3.Print();*/
-	if (a > b)
+
+	/*if (a > b)
 	{
 		cout << "a>b\n";
 	}
@@ -41,5 +50,5 @@ int main()
 	if (a <= b)
 	{
 		cout << "a<=b\n";
-	}
+	}*/
 }
