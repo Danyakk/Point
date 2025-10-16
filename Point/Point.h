@@ -29,7 +29,20 @@ public:// интерфейс класса, прототипы методов
 	Point operator-(Point& b);
 	Point operator/(Point& b);*/
 
-	Point& operator++ ();
-	Point& operator-- ();
+	//Point& operator++ ();
+	//Point& operator-- ();
+
+	void SetX(int a) {
+		x = a;
+	}
+	void SetY(int a) {
+		y = a;
+	}
+	int GetX() {
+		return x;
+	}
+	int GetY() {
+		return y;
+	}
 };
 
