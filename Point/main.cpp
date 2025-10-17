@@ -9,30 +9,30 @@ Point operator+ (int a, Point& b)
 
 	return res;
 }
-
-Point operator- (int a, Point& b)
-{
-	Point res(a - b.GetX(), a - b.GetY());
-	return res;
-}
-
-Point operator* (int a, Point& b)
-{
-	Point res(a * b.GetX(), a * b.GetY());
-	return res;
-}
-
-Point operator/ (int a, Point& b)
-{
-	Point res(a / b.GetX(), a / b.GetY());
-	return res;
-}
-
-Point operator* (Point& b, int a)
-{
-	Point res(a * b.GetX(), a * b.GetY());
-	return res;
-}
+//
+//Point operator- (int a, Point& b)
+//{
+//	Point res(a - b.GetX(), a - b.GetY());
+//	return res;
+//}
+//
+//Point operator* (int a, Point& b)
+//{
+//	Point res(a * b.GetX(), a * b.GetY());
+//	return res;
+//}
+//
+//Point operator/ (int a, Point& b)
+//{
+//	Point res(a / b.GetX(), a / b.GetY());
+//	return res;
+//}
+//
+//Point operator* (Point& b, int a)
+//{
+//	Point res(a * b.GetX(), a * b.GetY());
+//	return res;
+//}
 
 
 
@@ -51,10 +51,35 @@ Point operator -- (Point& b, int)
 	return temp;
 }
 
+
+ostream& operator<<(ostream& os, Point& obj)
+{
+	os << "X: " << obj.GetX() << "Y:" << obj.GetY() << endl;
+    return os;
+}
+
+istream& operator>>(istream& is, Point& obj)
+{
+	int temp;
+	is >> temp;
+	obj.SetX(temp);
+	is >> temp;
+	obj.SetY(temp);
+	return is;
+}
+
 int main()
 {/*
 	Point::PrintCount();*/
-	Point a(1, 2), b(3, 4);/*
+	Point a(1, 2), b(3, 4);
+	
+	cout << a << endl;
+	cin >> a;
+
+	cout << a << endl;
+
+
+	/*
 	Point::PrintCount();*/
 	/*Point d = a + b;
 	Point d1 = a.operator+(b);
@@ -62,23 +87,23 @@ int main()
 	d1.Print();*/
 	
 
-	Point d = 10 + a;
-	d = a + 10;
-	--d;
-	d--;
-	d.Print();
+	//Point d = 10 + a;
+	//d = a + 10;
+	//--d;
+	//d--;
+	//d.Print();
 
-	Point a1 = 15 - a;
-	a1.Print();
+	//Point a1 = 15 - a;
+	//a1.Print();
 
-	Point a2 = 2 * a;
-	a2.Print();
+	//Point a2 = 2 * a;
+	//a2.Print();
 
-	Point a3 = 10 / a;
-	a3.Print();
+	//Point a3 = 10 / a;
+	//a3.Print();
 
-	Point a4 = a * 2;	
-	a4.Print();
+	//Point a4 = a * 2;	
+	//a4.Print();
 
 
 	/*Реализовать след глобальніе перегрузки :
